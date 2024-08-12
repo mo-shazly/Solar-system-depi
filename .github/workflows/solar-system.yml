@@ -21,6 +21,7 @@ jobs:
                 exclude:
                     - nodejs_version: 18
                       operating_system: macos-latest
+                      
         runs-on: ${{ matrix.operating_system }}
         steps:
             - name: checkout
@@ -45,7 +46,7 @@ jobs:
               with:
                 name: mocha-test-result
                 path: test-results.xml
-                
+
 
     Code-coverage:
         name:  Code-coverage 
