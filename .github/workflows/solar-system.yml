@@ -111,4 +111,4 @@ jobs:
                     #docker inspect solar-system-app | grep -i IPAddress
 
                     echo Testing Image URL using wget
-                    wget -q -O -127.0.0.1:3000/live | grep live
+                    wget -q -O - 127.0.0.1:3000/live | grep live
