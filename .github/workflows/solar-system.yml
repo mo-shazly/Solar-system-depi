@@ -35,18 +35,18 @@ jobs:
               run: npm install
 
             - name: unit testing
-              id: nodejs-unit-testng-step
+             
               run: npm test
             
             - name: Archive test result
-              if: steps.nodejs-unit-testing-step.outcome == 'failure' || steps.nodejs-unit-testing.step.outcome == 'success'
+            
               uses: actions/upload-artifact@v3
               with:
                 name: mocha-test-result
                 path: test-results.xml
     Code-coverage:
         name:  Code-coverage 
-        needs: unit-testing
+       
         runs-on: ubuntu-latest
         steps:
             - name: checkout
